@@ -1,7 +1,12 @@
 <?php
 
 $name = 'Kenny';
-$dead = "ezfze";
+
+if (isset($_GET['dead']) && $_GET['dead'] === 'true') {
+    $dead = true;
+} else {
+    $dead = false;
+}
 
 $falseString  = "";
 $falseInteger = 0;
@@ -11,8 +16,10 @@ $falseObject  = new StdClass();
 
 if (true === $dead) {
     echo "$name is dead. U bastard";
-} else {
+} elseif (false === $dead) {
     echo "$name is alive";
+} else {
+    echo "type is not a boolean";
 }
 
 // boolean == string
