@@ -1,3 +1,10 @@
+<?php /*
+
+include et pas de fichier error => E_WARNING
+
+require et pas de fichier error => E_ERROR
+
+*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
